@@ -64,9 +64,6 @@ entryNum = arraySizes[0]*arraySizes[1]*arraySizes[2]
 lineNum = int(entryNum/10) + bool(entryNum%10)
 # Read in the density array
 densityArray = np.empty(arraySizes)
-zMax = 0
-xMax = 0
-yMax = 0
 for lineCount in range(lineNum):
         nextLine = inFile.readline()
         lineData = re.split("\s+",nextLine)
@@ -113,7 +110,7 @@ for atom in atomList:
     while not it.finished:
         # Loop over all lattice offsets
         for latOff in shiftList:
-            xyz = 
+            xyz = ( 
             # Calculate distance to atom (include lattice shifts)
             
             # (optionally exclude point if longer than a particular distance)
